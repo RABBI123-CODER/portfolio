@@ -214,3 +214,35 @@ body, html {
         align-items: flex-start;
     }
 }
+
+.hero-section {
+  min-height: 100vh;
+  padding: 80px 40px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* টেক্সটটি যাতে ফ্রেমের বাইরে লুকানো থাকে */
+.text-wrapper {
+  overflow: hidden; /* এর বাইরের লেখা দেখা যাবে না */
+  margin-bottom: 5px;
+}
+
+/* প্রাথমিক অবস্থায় লেখা নিচে লুকিয়ে থাকবে */
+.reveal-text {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.1;
+  transform: translateY(100%); /* নিচ থেকে ১০০% সরা থাকবে */
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+/* স্ক্রোল করে সামনে আসলে এই ক্লাস যুক্ত হবে */
+.reveal-text.active {
+  transform: translateY(0); /* তার আসল জায়গায় ফিরে আসবে */
+  opacity: 1;
+}
