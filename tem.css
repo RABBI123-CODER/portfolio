@@ -246,3 +246,57 @@ body, html {
   transform: translateY(0); /* তার আসল জায়গায় ফিরে আসবে */
   opacity: 1;
 }
+
+
+/* পুরো কন্টেন্ট এরিয়াকে ফ্লেক্সবক্স করা */
+.hero-content {
+    display: flex;
+    justify-content: space-between; /* বাম ও ডান অংশ দুই প্রান্তে পাঠাবে */
+    align-items: flex-end; /* ডান পাশের অংশকে নিচের দিকে নামাবে */
+    width: 100%;
+    margin-top: auto; /* কন্টেন্টকে নিচমুখী করে */
+}
+
+/* বাম পাশের হেডিং এরিয়া */
+.hero-left {
+    max-width: 60%;
+}
+
+/* ডান পাশের প্যারাগ্রাফ ও রিড মোর এরিয়া */
+.hero-right {
+    max-width: 320px; /* লেখাগুলোর উইথ নিয়ন্ত্রণ করবে */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* প্যারাগ্রাফ ও বাটনের মাঝে গ্যাপ */
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Read More বাটন এবং পার্পল বক্স ডিজাইন */
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.read-more-btn:hover {
+    opacity: 0.7;
+}
+
+/* ছবির মতো ছোট পার্পল স্কয়ার বক্সটি */
+.purple-square {
+    width: 12px;
+    height: 12px;
+    background-color: #a855f7; /* Purple color */
+    display: inline-block;
+}

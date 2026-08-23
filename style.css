@@ -98,7 +98,7 @@ body {
 
 /* .navbar.scrolled {
     background-color: #ffffff; /* নেভবারের ব্যাকগ্রাউন্ড সাদা করবে */
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+/* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 /* } */
 
 .navbar.scrolled .logu {
@@ -182,6 +182,19 @@ body {
     z-index: 100;
 }
 
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+
+
 .txt-wrapper {
     overflow: hidden;
     margin-bottom: 10px;
@@ -205,3 +218,328 @@ body {
     transform: translateY(0) !important;
     opacity: 1 !important;
 } */
+
+
+.hero-right {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* text-align:left; */
+    /* margin-top: 380px; */
+    margin-left: auto;
+    /* transform: translateY(120px); */
+
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #000000;
+    font-weight: 500;
+
+}
+
+.read-more-btn {
+    align-self: flex-start;
+    width: fit-content;
+    /* color: var(--text-white); */
+    text-decoration: none;
+    /* padding: 10px 20px; */
+    /* background-color:var(--bg-dark); */
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    /* font-weight: 600; */
+    /* font-size: 0.9rem; */
+    border-radius: 6px;
+    transition: transform 02s ease, opacity 0.2s ease;
+}
+
+.read-more-btn .text-box {
+    background-color: #000000;
+    color: var(--text-white);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+
+
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.read-more-btn .arrow-box {
+    background-color: #000000;
+    color: var(--text-white);
+    font-size: 0.95rem;
+    display: inline-flex;
+    /* padding: 10px 18px; */
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.read-more-btn:hover {
+    /* opacity:var(--glass-bg); */
+    pointer: curser;
+
+}
+
+/* portfoli images design */
+
+
+.portfoli-sec {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 80px 40px;
+    position: relative;
+
+}
+
+
+.portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* .img-wrapper-update {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.large-card {
+    width: 55%;
+}
+
+.large-card .img-wrapper {
+    height: 580px;
+}
+
+
+.small-card {
+    width: 40% !important;
+    max-width: 400px;
+    flex-shrink: 0;
+    position: relative;
+    margin-top: 200px;
+}
+
+.small-card .img-wrapper {
+    width: 100%;
+    height: 380px !important;
+    overflow: hidden;
+}
+
+
+.card-number {
+    font-size: 14px;
+    color: var(--bg-dark, #000000);
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-weight: 600;
+    z-index: 5;
+}
+
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.card-info .category {
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+
+.protholio-grid-row-2 {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.small-square-card {
+    width: 25%;
+    position: relative;
+}
+
+.small-square-card .img-wrapper {
+    height: 280px;
+}
+
+/* icon set center */
+
+
+.icon-set-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    position: relative;
+    /* z-index: 10; */
+
+}
+
+
+.icon-set-center svg {
+    color: #000000;
+    width: 38px;
+    height: 38px;
+}
+
+@keyframes spinOnce {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.project-title {
+    background: var(--text-white);
+    /* font-size: 45px; */
+    /* font-weight: 500; */
+    display: flex;
+    /* padding-bottom: 4px; */
+    position: relative;
+    flex-direction: column;
+
+}
+
+.title {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.title-icon {
+    font-size: 45px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-dark);
+    margin-top: 80px;
+    text-decoration: underline;
+}
+
+.title .count {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    top: 85px;
+    right: 500px;
+}
+
+
+
+/* Stepped Black Container */
+.stepped-hero {
+
+    width: 100%;
+    /* height: 450px; */
+    height: 500px;
+    /* margin-top: 300px; */
+    background-color: #000000;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+
+    /* ছবির সাথে মিল রেখে সিঁড়ির মতো শেপ */
+    clip-path: polygon(0% 25%,
+            /* বাম পাশের স্টেপ */
+            25% 25%,
+            25% 0%,
+            /* মাঝের উঁচু অংশ */
+            50% 0%,
+            50% 40%,
+            /* ডান পাশের নিচু অংশ */
+            100% 40%,
+            100% 100%,
+            0% 100%);
+}
+
+/* Typography Text Style */
+.marquee-text {
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.marquee-text span {
+    font-size: 48px;
+}
+
+/* Container CSS */
+.marquee-item {
+    display: flex;
+    align-items: center;  /* লেখা এবং আইকনকে লম্বালম্বিভাবে মাঝখানে রাখার জন্য */
+    gap: 30px;            /* আইকন এবং লেখার মধ্যকার দূরত্ব */
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* SVG Icon Styling */
+.sparkle-icon {
+    width: 38px;          /* আইকনের চওড়া */
+    height: 38px;         /* আইকনের উচ্চতা */
+    fill: #ffffff;        /* আইকনের কালার (সাদা) */
+    display: inline-block;
+    flex-shrink: 0;       /* স্ক্রিন ছোট হলেও আইকন চেপে যাবে না */
+}
