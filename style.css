@@ -57,10 +57,12 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
+    position: relative;
+    z-index: 100;
 }
 
 .nav-menu a {
-    color: var(--text-white);
+    color: #ffffff;
     display: flex;
     text-decoration: none;
     padding: 6px 12px;
@@ -68,12 +70,15 @@ body {
     font-weight: 600;
     border-radius: 6px;
     transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .nav-menu a:hover {
     background-color: var(--text-white);
     color: var(--bg-dark);
 }
+
+
 
 .button-1 {
     font-size: 15px;
@@ -444,12 +449,16 @@ body {
 
 .project-title {
     background: var(--text-white);
+    /* background-color: aqua; */
     /* font-size: 45px; */
     /* font-weight: 500; */
     display: flex;
     /* padding-bottom: 4px; */
     position: relative;
     flex-direction: column;
+
+
+   
 
 }
 
@@ -468,6 +477,7 @@ body {
     justify-content: center;
     color: var(--bg-dark);
     margin-top: 80px;
+    margin-bottom: 130px;
     text-decoration: underline;
 }
 
@@ -482,64 +492,240 @@ body {
 
 
 
-/* Stepped Black Container */
-.stepped-hero {
 
-    width: 100%;
-    /* height: 450px; */
-    height: 500px;
-    /* margin-top: 300px; */
-    background-color: #000000;
+
+.clients-design {
     display: flex;
-    align-items: flex-end;
-    padding-bottom: 80px;
+    /* background-color: #17d64a !important; */
 
-    /* ছবির সাথে মিল রেখে সিঁড়ির মতো শেপ */
-    clip-path: polygon(0% 25%,
-            /* বাম পাশের স্টেপ */
-            25% 25%,
-            25% 0%,
-            /* মাঝের উঁচু অংশ */
-            50% 0%,
-            50% 40%,
-            /* ডান পাশের নিচু অংশ */
-            100% 40%,
-            100% 100%,
-            0% 100%);
+    /* padding-bottom: 20px; */
+    /* padding: 20px; */
+    width: 100%;
+    /* height: 100%; */
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+
+    
+
 }
 
-/* Typography Text Style */
-.marquee-text {
-    color: #ffffff;
-    font-size: 64px;
-    font-weight: 600;
-    white-space: nowrap;
+
+/* পুরো সেকশন যাতে উপরে ও নিচে সিঁড়ি শেপে কাটে */
+.clients-section {
+    /* background-color: #4c2ae3; */
+    /* background-color: #ffffff; */
+    width: 100%;
+    /* height: 100%; */
+    /* padding: 10px; */
+    /* position: relative; */
+    /* z-index: 200; */
+    min-height: 100vh;
+    padding: 60px 20px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+}
+
+/* Marquee Area Center Align */
+.marquee-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* padding:20px; */
+}
+
+.marquee-item {
+    /* background-color: #dfdcec; */
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding-left: 20px;
-}
-
-.marquee-text span {
-    font-size: 48px;
-}
-
-/* Container CSS */
-.marquee-item {
-    display: flex;
-    align-items: center;  /* লেখা এবং আইকনকে লম্বালম্বিভাবে মাঝখানে রাখার জন্য */
-    gap: 30px;            /* আইকন এবং লেখার মধ্যকার দূরত্ব */
-    color: #ffffff;
-    font-size: 64px;
-    font-weight: 600;
-    white-space: nowrap;
+    gap: 15px;
+    color: var(--text-white);
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 /* SVG Icon Styling */
 .sparkle-icon {
-    width: 38px;          /* আইকনের চওড়া */
-    height: 38px;         /* আইকনের উচ্চতা */
-    fill: #ffffff;        /* আইকনের কালার (সাদা) */
+    width: 38px;
+    height: 38px;
+    fill: #ffffff;
     display: inline-block;
-    flex-shrink: 0;       /* স্ক্রিন ছোট হলেও আইকন চেপে যাবে না */
+    flex-shrink: 0;
+}
+
+
+/* 4-Column Grid System */
+.client-grid {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: 40PX auto;
+    /* margin: 20px; */
+    box-sizing: border-box;
+}
+
+/* Individual Card Design */
+.client-card {
+    background-color: #0a0a0a;
+    height: 220px;
+    width: 300px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-num {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.client-logo {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+
+/* Responsive Fix for Mobile Screen */
+@media (max-width: 900px) {
+    .client-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* ছোট ডিভাইসে ২ কলাম হবে */
+    }
+}
+
+
+.text-sec {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.text-static {
+    flex: 1;
+}
+.text-static h5{
+    /* padding: 20px; */
+    font: 400;
+    color: #000000;
+    font-size: 25px;
+    margin: 0;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* position: absolute; */
+}
+
+
+.text-dynamic {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text-dynamic p {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* আবছা (faded) টেক্সটের জন্য */
+.text-dynamic .muted {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+/* হাইলাইটেড টেক্সটের জন্য */
+.text-dynamic .active {
+  color: #000000;
+}
+
+
+
+.line-page {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: var(--text-white);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    
+
+}
+.top-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-lines div {
+  width: 32%; /* ৩টি লাইনের সাইজ */
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+/* বাম ও ডান পাশের পজিশনিং */
+.nav-text {
+  position: absolute;
+  top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.nav-text.left {
+  left: 40px;
+}
+
+.nav-text.right {
+  right: 40px;
+}
+
+/* মাঝখানের কন্টেন্ট স্টাইলিং */
+.center-content {
+  text-align: center;
+}
+
+.center-content h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000000;
+  margin: 0 0 20px 0;
+  letter-spacing: -2px;
+}
+
+.center-content p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
 }

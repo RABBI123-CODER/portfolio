@@ -300,3 +300,142 @@ body, html {
     background-color: #a855f7; /* Purple color */
     display: inline-block;
 }
+
+
+
+/* ...............................bg-image */
+
+
+.clients-design {
+    display: flex;
+    background-color: #17d64a !important;
+
+    /* padding-bottom: 20px; */
+    /* padding: 20px; */
+    width: 100%;
+    /* height: 100%; */
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+
+    clip-path: polygon(
+        0% 50px,
+        25% 50px,
+        25% 0px,
+        70% 0px,
+        70% 30px,
+        100% 30px,
+
+        100% calc(100% - 30px),
+        75% calc(100% - 30px),
+        75% 100%,
+        30% 100%,
+        30% calc(100% - 40px),
+        0% calc(100% - 40px)
+
+    );
+
+}
+
+
+/* পুরো সেকশন যাতে উপরে ও নিচে সিঁড়ি শেপে কাটে */
+.clients-section {
+    /* background-color: #4c2ae3; */
+    /* background-color: #ffffff; */
+    width: 100%;
+    /* height: 100%; */
+    /* padding: 10px; */
+    /* position: relative; */
+    /* z-index: 200; */
+    min-height: 100vh;
+    padding: 60px 20px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+       
+
+    
+
+}
+
+/* Marquee Area Center Align */
+.marquee-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding:10px;
+}
+
+.marquee-item {
+    /* background-color: #dfdcec; */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-white);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* SVG Icon Styling */
+.sparkle-icon {
+    width: 38px;
+    height: 38px;
+    fill: #ffffff;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+
+/* 4-Column Grid System */
+.client-grid {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: 40PX auto;
+    /* margin: 20px; */
+    box-sizing: border-box;
+}
+
+/* Individual Card Design */
+.client-card {
+    background-color: #0a0a0a;
+    height: 220px;
+    width: 280px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-num {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.client-logo {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+
+/* Responsive Fix for Mobile Screen */
+@media (max-width: 900px) {
+    .client-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* ছোট ডিভাইসে ২ কলাম হবে */
+    }
+}
