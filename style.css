@@ -633,9 +633,10 @@ body {
     color: #000000;
     font-size: 25px;
     margin: 0;
+    left: 1;
     /* align-items: center; */
     /* justify-content: space-between; */
-    /* position: absolute; */
+    position: absolute;
 }
 
 
@@ -643,7 +644,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .text-dynamic p {
@@ -652,12 +653,12 @@ body {
   margin: 0;
 }
 
-/* আবছা (faded) টেক্সটের জন্য */
+
 .text-dynamic .muted {
   color: rgba(0, 0, 0, 0.15);
 }
 
-/* হাইলাইটেড টেক্সটের জন্য */
+
 .text-dynamic .active {
   color: #000000;
 }
@@ -687,12 +688,12 @@ body {
 }
 
 .top-lines div {
-  width: 32%; /* ৩টি লাইনের সাইজ */
+  width: 32%;
   height: 1px;
-  background-color: #e0e0e0;
+  background-color: #ded9d9;
 }
 
-/* বাম ও ডান পাশের পজিশনিং */
+
 .nav-text {
   position: absolute;
   top: 40px;
@@ -709,7 +710,7 @@ body {
   right: 40px;
 }
 
-/* মাঝখানের কন্টেন্ট স্টাইলিং */
+
 .center-content {
   text-align: center;
 }
@@ -720,12 +721,134 @@ body {
   line-height: 1;
   color: #000000;
   margin: 0 0 20px 0;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
 }
 
 .center-content p {
   font-size: 14px;
   font-weight: 500;
   color: #000000;
+  margin: 0;
+}
+
+
+
+/* footer section  */
+
+.footer {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding: 60px 40px 30px;
+  /* height: 300px; */
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
+}
+
+/* 1. Top Section */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  font-size: 140px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 0.8;
+  letter-spacing: -3px;
+}
+
+.footer-clock {
+  text-align: right;
+}
+
+.footer-clock span {
+  font-size: 12px;
+  color: #a1a1a1;
+  display: block;
+}
+
+.footer-clock h2 {
+  font-size: 28px;
+  margin: 8px 0 0;
+  font-weight: 600;
+}
+
+/* Divider Line */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 0 50px 0;
+}
+
+/* 2. Middle Section */
+.footer-middle {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer-col h3,
+.footer-sitemap h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.footer-col p {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sitemap-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sitemap-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-links li {
+  margin-bottom: 8px;
+}
+
+.sitemap-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.sitemap-links a:hover {
+  color: #ffffff;
+}
+
+/* 3. Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #a1a1a1;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.copyright {
   margin: 0;
 }
